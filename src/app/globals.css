@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'pretendard';
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #ffffff;
+}
+
+.logo-rot {
+  rotate: 5deg;
+} 
