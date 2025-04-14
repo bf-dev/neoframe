@@ -1,7 +1,9 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 import { Moon } from 'lucide-react';
 import { CommonBlackLogo } from './CommonBlackLogo';
+import { usePathname } from 'next/navigation';
 
 interface NavigationItem {
   href: string;
@@ -14,7 +16,7 @@ interface HeaderProps {
 }
 
 export default function Header({ siteName, navigationItems }: HeaderProps) {
-  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const pathname = usePathname();
 
   return (
     <header className="z-50 mx-auto flex shrink-0 flex-row items-center justify-between bg-background px-4 py-3.5 font-sans w-full">
@@ -29,7 +31,7 @@ export default function Header({ siteName, navigationItems }: HeaderProps) {
               key={item.href}
               href={item.href} 
               className={`flex h-full flex-col items-center justify-center gap-1 p-2 font-medium rounded-md transition-all duration-200 hover:bg-neutral-100 ${
-                pathname === item.href ? 'text-neutral-900 font-bold' : 'text-neutral-400'
+                encodeURIComponent(pathname || '') === encodeURIComponent(item.href) ? 'text-neutral-900 font-bold' : 'text-neutral-400'
               }`}
             >
               <p className="text-base">{item.label}</p>
