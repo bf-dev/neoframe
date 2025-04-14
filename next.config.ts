@@ -4,7 +4,11 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   images:{
-    remotePatterns: [new URL("https://via.placeholder.com/*")],
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: 'via.placeholder.com',
+      pathname: '**',
+    }],
     unoptimized: true,
   }
 };
