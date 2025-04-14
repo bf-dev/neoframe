@@ -26,7 +26,7 @@ This will generate a static export in the `out` directory.
 
 ## Deployment
 
-The static files in the `out` directory can be deployed to any static hosting service, such as GitHub Pages, Vercel, Netlify, etc.
+This website is deployed to [neowiki.one](https://neowiki.one) using GitHub Pages.
 
 ## Tech Stack
 
