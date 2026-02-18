@@ -32,4 +32,23 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts 
+next-env.d.ts
+
+# editors
+.idea/
+.vscode/
+
+# env / secrets
+.env
+.env.*
+!.env.example
+*.key
+id_rsa*
+*.p12
+*.pfx
+*.mobileprovision
+serviceAccount*.json
+
+# logs
+*.log
+
